@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	input[type="number"] {
+		-moz-appearance: textfield;
+		@apply w-fit rounded-lg border p-2 font-mono text-8xl;
+	}
+
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+}
+
+@layer components {
+	.screen {
+		@apply px-[12%] py-2;
+	}
+
+	@media (max-width: 1500px) {
+		.screen {
+			@apply px-[7%];
+		}
+	}
+
+	@media (max-width: 1000px) {
+		.screen {
+			@apply px-[10px] py-[20px];
+		}
+	}
+}
