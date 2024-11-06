@@ -35,7 +35,7 @@ const Pair: React.FC<PairProps> = ({ value, name, max, index, refs }) => {
 					name="first"
 					value={first}
 					onChange={onChange}
-					maxLength={1}
+					maxLength={2}
 					ref={(el) => {
 						if (el) refs.current[index] = el;
 					}}
@@ -46,7 +46,7 @@ const Pair: React.FC<PairProps> = ({ value, name, max, index, refs }) => {
 					name="second"
 					value={second}
 					onChange={onChange}
-					maxLength={1}
+					maxLength={2}
 					ref={(el) => {
 						if (el) refs.current[index + 1] = el;
 					}}
