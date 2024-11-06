@@ -18,11 +18,11 @@ const Pair: React.FC<PairProps> = ({ value, name, max, index, refs }) => {
 		if (isNaN(value)) return;
 
 		if (e.target.name !== "second") {
-			refs.current[index + 1].focus();
 			setFirst(Math.min(Math.abs(value % 10), max));
+			refs.current[index + 1].focus();
 		} else {
-			if (index + 2 < refs.current.length) refs.current[index + 2].focus();
 			setSecond(Math.abs(value % 10));
+			if (index + 2 < refs.current.length) refs.current[index + 2].focus();
 		}
 	};
 
